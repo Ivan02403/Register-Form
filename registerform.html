@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Register</title>
+		<meta charset="8-UTF">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap" rel="stylesheet">
+		<style>
+			*{
+				margin: 0;
+				padding: 0;
+				box-sizing: border-box;
+				font-family: 'Ubuntu', sans-serif;
+			}
+
+			body{
+				background:linear-gradient(135deg,#0B1629, #122543, #8CC4DF );
+				background-repeat: no-repeat;
+				height: 100vh;
+				color:whitesmoke;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				padding: 10px;
+			}
+
+			.container{
+				background:linear-gradient(135deg,#8CC4DF, #122543, #0B1629) ;
+				max-width: 700px;
+				width: 100%;
+				border-radius: 25px;
+				padding: 25px 30px;
+			}
+
+			.container .heading{
+				font-size: 25px;
+				font-weight: 500;
+				position: relative;
+				text-align: center;
+				padding: 0 0 20px 0;
+			}
+
+			.container .heading::before{
+				content: '';
+				background:linear-gradient(135deg,#0B1629, #8CC4DF );
+				position: absolute;
+				border: 3px;
+				height: 3px;
+				left: 0;
+				bottom: 0;
+				width: 100%;
+			}
+
+			.container form .card-details{
+				margin-top: 25px;
+				display: flex;
+				flex-wrap: wrap;
+				justify-content: space-between
+
+			}
+
+			form .card-details .card-box{
+				width: calc(100% / 2 - 20px);
+				margin-bottom: 15px;
+			}
+
+			.card-details .card-box .details{
+				display: block;
+				font-weight: 500;
+				margin-bottom: 5px;
+				
+			}
+
+			.card-details .card-box input{
+				width: 100%;
+				height: 45px;
+				outline: none;
+				padding-left: 15px;
+				border-radius: 5px;
+				border: 1px solid whitesmoke;
+				font-size: 1rem;
+				border-bottom-width:2px ;
+				transition: all 0.3s ease;
+			}
+
+			.card-details .card-box input:focus,
+			.card-details .card-box input:valid{
+				border-color: navy;
+			}
+
+			form .circular-form .circular-title{
+				font-size: 20px;
+				font-weight: 500;
+				border-bottom:2px solid;
+			}
+
+			form .circular-form .category{
+				margin-top: 10px;
+				margin-bottom: 10px;
+			}
+
+			form .button{
+				text-align: center;
+			}
+
+			form .button input{
+				padding: 10px;
+				border-radius: 10px;
+				background-color: #0B1629;
+				color:whitesmoke;
+				font-size: 18px;
+				font-weight: 700;
+				height: 100%;
+				width: 50%;
+				outline: none;
+				border: none;
+				letter-spacing: 1px;
+			}
+
+			form .button input:hover{
+				color: #0B1629;
+				background-color: aliceblue;
+			}
+
+			@media (max-width:584px){
+				.container{
+					width: 100%;
+				}
+
+				form .card-details .card-box{
+					margin-bottom: 15px;
+					width: 100%;
+				}
+
+				form .circular-form .category{
+					width:100%
+				}
+
+				.container form .card-details{
+					max-height: 300px;
+					overflow:scroll;
+				}
+
+				.card-details::-webkit-scrollbar{
+					width: 0;
+				}
+			}
+
+		</style>
+	</head>
+	<body>
+		<div class="container">
+			<div class="heading">Registration</div>
+			<form action="#">
+				<div class="card-details">
+					<div class="card-box">
+						<span class="details">Fullname</span>
+						<input type="text" placeholder="Enter your name">
+					</div>
+
+					<div class="card-box">
+						<span class="details">Username</span>
+						<input type="text" placeholder="Enter your username">
+					</div>
+
+					<div class="card-box">
+						<span class="details">Email</span>
+						<input type="email" placeholder="Enter your email">
+					</div>
+
+					<div class="card-box">
+						<span class="details">Phone Number</span>
+						<input type="text" placeholder="phone number">
+					</div>
+
+					<div class="card-box">
+						<span class="details">Password</span>
+						<input type="password" placeholder="Enter your password">
+					</div>
+
+					<div class="card-box">
+						<span class="details">Confirm Password</span>
+						<input type="password" placeholder="Confirm password">
+					</div>
+				</div>
+
+				<div class="circular-form">
+					<span class="circular-title">Gender</span>
+					<div class="category">
+						<input type="radio" name="gender">Male
+						<input type="radio" name="gender">Female
+						<input type="radio" name="gender">Prefer not to say
+					</div>
+				</div>
+				<div class="button">
+					<input type="submit" value="Register">
+				</div>
+			</form>
+		</div>
+	</body>
+</html>
